@@ -1,0 +1,206 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-pala: 'Palanquin', sans-serif;
+  --ff-staa: 'Staatliches', cursive;
+}
+body {
+  background: #cfd2e7;
+}
+.page {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background: #8E9AAF;
+  height: 28rem;
+}
+
+header img {
+  margin: 3.2rem auto;
+  width: 14rem;
+  height: 14rem;
+}
+
+header img:hover {
+  animation: rotate 2s both;
+  animation-delay: 750ms, 750ms;
+  animation-iteration-count: infinite;
+}
+
+header h1 {
+  background-color: #CBC0D3;
+  padding: 0.8rem 0;
+  text-align: center;
+  font-family: var(--ff-staa);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  
+  height: 5rem;
+
+  letter-spacing: 0.05em;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main {
+  background-color:#EFF1FF;
+  padding: 1rem 3rem;
+  display: grid;
+  gap: 3.6rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card h2 {
+  position: absolute;
+
+  top: 1.6rem;
+  right: 1.6rem;
+
+  animation: topdown 4s forwards;
+}
+
+.card img {
+  animation: downtop 500ms forwards;
+}
+main p {
+  font-family: var(--ff-pala);
+  color: #23053A;
+
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  margin: 1rem auto 6rem;
+}
+
+main h2 {
+  font-family: var(--ff-staa);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #4A4E69;
+
+  background: #FEEAFA;
+  border-radius: 2rem;
+  width: fit-content;
+  padding: 1rem 2.4rem;
+}
+
+main h2:hover  {
+  background: #ee5fd1;
+}
+
+@media (min-width: 900px) {
+  body {
+    background: #EFF1FF;
+  }
+  
+  .page {
+    max-width: 100%;
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 0 30rem;
+    grid-template-areas: "A A A"
+    "B C D"
+    "B E D";
+
+    gap: 2rem;
+
+  }
+
+  main p  {
+    height: auto;
+    margin-top: 10rem;
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: bold;
+  }
+
+  .card h2 {
+    top: 1.6rem;
+    right: auto;
+    left: 1.6rem;
+  }
+
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+
+  main div:nth-child(2) {
+    grid-area: C;
+  }
+
+  main div:nth-child(3) {
+    grid-area: B;
+  }
+
+  main div:nth-child(4) {
+    grid-area: E;
+  }
+
+  main div:nth-child(5) {
+    grid-area: D;
+  }
+
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+
+}
