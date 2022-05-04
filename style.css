@@ -57,7 +57,7 @@ header h1 {
 }
 
 main {
-  background-color:#EFF1FF;
+  background:#EFF1FF;
   padding: 1rem 3rem;
   display: grid;
   gap: 3.6rem;
@@ -112,7 +112,7 @@ main h2 {
 main h2:hover  {
   background: #ee5fd1;
 }
-
+/* 
 @media (min-width: 900px) {
   body {
     background: #EFF1FF;
@@ -168,7 +168,7 @@ main h2:hover  {
     grid-area: D;
   }
 
-}
+} */
 
 @keyframes topdown {
   0% {
